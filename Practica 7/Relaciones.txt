@@ -1,0 +1,64 @@
+Film
+film_id(pk)
+lenguaje_id(fk) 1:n
+original_lenguaje_id(fk) 1:1
+
+Lenguaje 
+Lenguaje_id(pk)
+
+Category
+Category_id(pk)
+
+Staff
+staff_id(pk)
+address_id(fk) 1:n
+store_id(fk) 1:n
+
+Store
+Store_id(pk)
+address_id(fk) 1:1
+
+Actor
+actor_id(pk)
+
+Film_Actor
+actor_id(fk) 1:n
+film_id(fk) 1:1
+
+Payment
+payment_id(pk)
+customer_id(fk) 1:n
+staff_id(fk) 1:n
+rental_id(fk) 1:n
+
+Inventory
+inventory_id(pk)
+film_id(fk) 1:n
+store_id(fk) 1:1
+
+Customer
+customer_id(pk)
+store_id(fk) 1:n
+address_id(fk) 1:1
+
+Film_category
+film_id(fk) 1:n
+category_id(fk) 1:n
+
+Rental
+rental_id(pk)
+inventory_id(fk) 1:1
+customer_id(fk) 1:n
+staff_id(fk) 1:n
+
+City
+city_id(pk)
+country_id(fk) 1:1
+
+Country 
+country_id(pk)
+
+Address
+address_id(pk)
+city_id(fk) 1:n
+
